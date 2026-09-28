@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sudoku — Política de privacidad / Privacy policy</title>
-<meta name="description" content="Sudoku no recoge ningún dato. / Sudoku collects no data.">
+<meta name="description" content="Sudoku funciona sin cuenta. Solo la clasificación diaria, si la usas, envía datos. / Sudoku works without an account. Only the daily ranking, if you use it, sends data.">
 <style>
   :root {
     --paper: #F3EFE4;
@@ -44,7 +44,7 @@
   }
   .double { border-top: 3px double var(--ink); border-bottom: 1px solid var(--ink); padding: 6px 0; }
   .double p { margin: 0; text-align: center; font-style: italic; font-size: 16px; }
-  nav { display: flex; gap: 20px; margin: 16px 0 8px; font-size: 16px; }
+  nav { display: flex; gap: 20px; flex-wrap: wrap; margin: 16px 0 8px; font-size: 16px; }
   a { color: var(--accent); }
   .kicker {
     margin: 36px 0 4px; font-size: 12px; font-weight: 600; letter-spacing: .14em;
@@ -64,76 +64,130 @@
 </head>
 <body>
 <main>
-  <div class="dateline"><span>Sudoku · app.gulolio.sudoku</span><span>27 sept. 2026</span></div>
+  <div class="dateline"><span>Sudoku · app.gulolio.sudoku</span><span>28 sept. 2026</span></div>
   <h1>Privacidad</h1>
-  <div class="double"><p>Sin anuncios, sin cuentas, sin datos. — Without ads, accounts or data.</p></div>
-  <nav><a href="#es">Español</a><a href="#en">English</a></nav>
+  <div class="double"><p>Sin anuncios. Sin cuenta obligatoria. — No ads. No account required.</p></div>
+  <nav><a href="#es">Español</a><a href="#en">English</a><a href="delete.html">Borrar mis datos / Delete my data</a></nav>
 
   <section id="es" class="lang" lang="es">
     <div class="kicker">Política de privacidad</div>
-    <h2>Esta app no recoge ningún dato</h2>
-    <p class="lead">Sudoku es un juego gratuito, sin anuncios y sin compras. No pide cuenta, no usa internet y no envía nada a nadie: ni al desarrollador ni a terceros.</p>
+    <h2>Juegas sin dar ningún dato</h2>
+    <p class="lead">Sudoku es un juego gratuito, sin anuncios y sin compras. Todo el juego funciona sin cuenta y sin internet. Solo si decides entrar en la <strong>clasificación diaria</strong> la app se conecta a nuestro servidor, y solo con lo que se explica aquí.</p>
 
-    <h3>Qué se guarda y dónde</h3>
-    <p>Para que puedas continuar donde lo dejaste, la app guarda en tu teléfono, y solo en tu teléfono:</p>
+    <h3>En tu teléfono</h3>
+    <p>La app guarda en tu teléfono, y solo en tu teléfono:</p>
     <ul>
       <li>tu progreso en los niveles y las partidas empezadas;</li>
-      <li>tus resultados (tiempos, errores, estrellas) para la pantalla de estadísticas y la racha diaria;</li>
-      <li>tus ajustes: idioma, color de la tinta y las ayudas que elijas.</li>
+      <li>tus resultados (tiempos, errores, estrellas) para las estadísticas y la racha diaria;</li>
+      <li>tus ajustes: idioma, color de la tinta, música y las ayudas que elijas;</li>
+      <li>si entras en la clasificación: tu nombre, tu código secreto y tus resultados clasificados.</li>
     </ul>
-    <p>Esa información nunca sale del dispositivo por parte de la app. Si desinstalas la app, se borra.</p>
+    <p>Si desinstalas la app, todo esto se borra del teléfono.</p>
+
+    <h3>La clasificación diaria (opcional)</h3>
+    <p>Para aparecer en la clasificación eliges un <strong>nombre</strong> (un apodo, no hace falta que sea tu nombre real). No pedimos correo, teléfono ni ningún otro dato. Nuestro servidor guarda:</p>
+    <ul>
+      <li>tu nombre y la fecha en que lo elegiste;</li>
+      <li>una huella (hash SHA-256) de un código secreto aleatorio que la app guarda en tu teléfono; el código en sí nunca se guarda en el servidor;</li>
+      <li>por cada diario clasificado que abres: cuándo lo abriste, cuándo enviaste la solución, tu tiempo, tus errores y pistas, y el tiempo que marcaba la app.</li>
+    </ul>
+    <p>La solución que envías se comprueba y no se guarda. No guardamos tu dirección IP, ni identificadores del dispositivo, ni tu ubicación.</p>
+    <p><strong>Es público:</strong> tu nombre, tu puesto, tu tiempo y tus errores aparecen en la clasificación que ven los demás jugadores.</p>
+
+    <h3>Conexión</h3>
+    <p>La conexión con el servidor va cifrada (HTTPS) y pasa por <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a>, que la protege y la encamina y trata tu dirección IP para ello. Nuestro servidor usa tu IP solo en memoria, como mucho una hora, para frenar abusos (por ejemplo, demasiados nombres creados seguidos), y no la guarda en ningún sitio.</p>
+
+    <h3>Compartir</h3>
+    <p>Si compartes un sudoku resuelto, la imagen y el texto van solo a la app que elijas en el menú de compartir de Android. Sudoku no los envía a ningún otro sitio.</p>
+
+    <h3 id="borrar">Borrar tus datos</h3>
+    <ul>
+      <li><strong>Desde la app:</strong> en la portada, «Borrar mi nombre y resultados». Se borran al momento del servidor tu nombre, tu código y todos tus resultados.</li>
+      <li><strong>Sin la app</strong> (por ejemplo, si perdiste el teléfono): escribe a <a href="mailto:sudokupaper@proton.me">sudokupaper@proton.me</a> con tu nombre de la clasificación. Lo borramos en un plazo de 30 días. Más detalles en <a href="delete.html">esta página</a>.</li>
+    </ul>
+    <p>Si no los borras, tus datos de la clasificación se conservan mientras exista la clasificación.</p>
 
     <h3>Qué no hace</h3>
     <ul>
-      <li>No tiene acceso a internet (no pide ese permiso) ni pide ningún otro permiso.</li>
-      <li>No usa analítica, publicidad, rastreo ni identificadores.</li>
+      <li>El único permiso que pide es el de internet, y solo lo usa para la clasificación.</li>
+      <li>No usa analítica, publicidad ni rastreo.</li>
       <li>No lee tus contactos, fotos, ubicación ni ningún otro dato del teléfono.</li>
-      <li>No vende ni comparte datos, porque no tiene ninguno.</li>
+      <li>No vende ni comparte datos con nadie.</li>
     </ul>
 
+    <h3>Nombres en la clasificación</h3>
+    <p>Los nombres ofensivos o que se hagan pasar por otra persona pueden cambiarse o borrarse, junto con sus resultados.</p>
+
     <h3>Copia de seguridad de Android</h3>
-    <p>Si tienes activada la copia de seguridad de Google en tu teléfono, Android puede incluir los datos del juego en ella, igual que con otras apps. Esa copia la gestiona Google bajo tu cuenta y su propia política de privacidad; el desarrollador no tiene acceso a ella. Puedes desactivarla en los ajustes de Android.</p>
+    <p>Si tienes activada la copia de seguridad de Google en tu teléfono, Android puede incluir los datos del juego en ella, igual que con otras apps. Esa copia la gestiona Google bajo tu cuenta y su propia política de privacidad; el desarrollador no tiene acceso a ella.</p>
 
-    <h3>Niños</h3>
-    <p>La app no recoge datos de nadie, incluidos menores.</p>
+    <h3>Menores</h3>
+    <p>La clasificación no está pensada para menores de 13 años. El resto del juego no recoge datos de nadie.</p>
 
-    <h3>Cambios y contacto</h3>
-    <p>Si esta política cambia, se actualizará esta página y su fecha. Para cualquier pregunta: <a href="mailto:sudokupaper@proton.me">sudokupaper@proton.me</a>.</p>
+    <h3>Tus derechos y contacto</h3>
+    <p>El responsable es el desarrollador, Gulolio. Puedes pedir acceso a tus datos, corregirlos o borrarlos escribiendo a <a href="mailto:sudokupaper@proton.me">sudokupaper@proton.me</a>, y reclamar ante la autoridad de protección de datos de tu país. Si esta política cambia, se actualizará esta página y su fecha.</p>
   </section>
 
   <section id="en" class="lang" lang="en">
     <div class="kicker">Privacy policy</div>
-    <h2>This app collects no data</h2>
-    <p class="lead">Sudoku is a free game with no ads and no purchases. It needs no account, does not use the internet and sends nothing to anyone: not to the developer and not to third parties.</p>
+    <h2>You play without giving any data</h2>
+    <p class="lead">Sudoku is a free game with no ads and no purchases. The whole game works without an account and without the internet. Only if you choose to join the <strong>daily ranking</strong> does the app connect to our server, and only with what is described here.</p>
 
-    <h3>What is stored, and where</h3>
-    <p>So you can pick up where you left off, the app stores on your phone, and only on your phone:</p>
+    <h3>On your phone</h3>
+    <p>The app stores on your phone, and only on your phone:</p>
     <ul>
       <li>your level progress and games in progress;</li>
-      <li>your results (times, mistakes, stars) for the statistics screen and the daily streak;</li>
-      <li>your settings: language, ink color and the helpers you turn on.</li>
+      <li>your results (times, mistakes, stars) for the statistics and the daily streak;</li>
+      <li>your settings: language, ink color, music and the helpers you turn on;</li>
+      <li>if you join the ranking: your name, your secret code and your ranked results.</li>
     </ul>
-    <p>The app never sends this information off the device. Uninstalling the app deletes it.</p>
+    <p>Uninstalling the app deletes all of this from the phone.</p>
+
+    <h3>The daily ranking (optional)</h3>
+    <p>To appear in the ranking you choose a <strong>name</strong> (a nickname; it doesn't have to be your real name). We don't ask for an email, a phone number or anything else. Our server stores:</p>
+    <ul>
+      <li>your name and the date you chose it;</li>
+      <li>a fingerprint (SHA-256 hash) of a random secret code the app keeps on your phone; the code itself is never stored on the server;</li>
+      <li>for each ranked daily you open: when you opened it, when you sent the solution, your time, your mistakes and hints, and the time the app showed.</li>
+    </ul>
+    <p>The solution you send is checked and not stored. We don't store your IP address, device identifiers or your location.</p>
+    <p><strong>It is public:</strong> your name, place, time and mistakes appear in the ranking other players see.</p>
+
+    <h3>Connection</h3>
+    <p>The connection to the server is encrypted (HTTPS) and goes through <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a>, which protects and routes it and processes your IP address to do so. Our server uses your IP in memory only, for at most one hour, to stop abuse (for example, too many names created in a row), and never stores it.</p>
+
+    <h3>Sharing</h3>
+    <p>If you share a solved puzzle, the image and text go only to the app you pick in Android's share menu. Sudoku sends them nowhere else.</p>
+
+    <h3 id="delete">Deleting your data</h3>
+    <ul>
+      <li><strong>In the app:</strong> on the front page, "Delete my name and results". Your name, code and all your results are deleted from the server at once.</li>
+      <li><strong>Without the app</strong> (for example, if you lost your phone): email <a href="mailto:sudokupaper@proton.me">sudokupaper@proton.me</a> with your ranking name. We delete it within 30 days. More on <a href="delete.html">this page</a>.</li>
+    </ul>
+    <p>If you don't delete them, your ranking data is kept for as long as the ranking exists.</p>
 
     <h3>What it does not do</h3>
     <ul>
-      <li>It has no internet access (it does not request that permission) and requests no other permissions.</li>
-      <li>No analytics, advertising, tracking or identifiers.</li>
+      <li>The only permission it requests is internet access, used only for the ranking.</li>
+      <li>No analytics, advertising or tracking.</li>
       <li>It does not read your contacts, photos, location or anything else on the phone.</li>
-      <li>It does not sell or share data, because it has none.</li>
+      <li>It does not sell or share data with anyone.</li>
     </ul>
 
+    <h3>Names in the ranking</h3>
+    <p>Names that are offensive or impersonate someone may be changed or removed, together with their results.</p>
+
     <h3>Android backup</h3>
-    <p>If Google backup is turned on for your phone, Android may include the game's data in it, as it does for other apps. That backup is handled by Google under your account and Google's own privacy policy; the developer has no access to it. You can turn it off in Android's settings.</p>
+    <p>If Google backup is turned on for your phone, Android may include the game's data in it, as it does for other apps. That backup is handled by Google under your account and Google's own privacy policy; the developer has no access to it.</p>
 
     <h3>Children</h3>
-    <p>The app collects no data from anyone, including children.</p>
+    <p>The ranking is not meant for children under 13. The rest of the game collects no data from anyone.</p>
 
-    <h3>Changes and contact</h3>
-    <p>If this policy changes, this page and its date will be updated. Questions: <a href="mailto:sudokupaper@proton.me">sudokupaper@proton.me</a>.</p>
+    <h3>Your rights and contact</h3>
+    <p>The controller is the developer, Gulolio. You can ask to access, correct or delete your data by emailing <a href="mailto:sudokupaper@proton.me">sudokupaper@proton.me</a>, and complain to the data protection authority in your country. If this policy changes, this page and its date will be updated.</p>
   </section>
 
-  <footer>Última actualización / Last updated: 27 septiembre 2026 · Developer: Gulolio</footer>
+  <footer>Última actualización / Last updated: 28 septiembre 2026 · Developer: Gulolio</footer>
 </main>
 </body>
 </html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sudoku — Borrar mis datos / Delete my data</title>
+<meta name="description" content="Cómo borrar tu nombre y resultados de la clasificación de Sudoku. / How to delete your name and results from the Sudoku ranking.">
+<style>
+  :root { --paper: #F3EFE4; --ink: #161513; --muted: #5E5A52; --accent: #B3141F; }
+  @media (prefers-color-scheme: dark) {
+    :root { --paper: #151412; --ink: #ECE6D8; --muted: #A8A194; --accent: #E8665D; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: "Newsreader", Georgia, "Times New Roman", serif; font-size: 18px; line-height: 1.55;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 24px 16px 48px; }
+  .dateline {
+    display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+    font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--muted); border-bottom: 1px solid var(--ink); padding-bottom: 6px;
+  }
+  h1 { margin: 10px 0 6px; font-size: clamp(36px, 10vw, 54px); line-height: .95; font-weight: 800; letter-spacing: -.02em; }
+  .double { border-top: 3px double var(--ink); border-bottom: 1px solid var(--ink); padding: 6px 0; }
+  .double p { margin: 0; text-align: center; font-style: italic; font-size: 16px; }
+  a { color: var(--accent); }
+  .kicker { margin: 32px 0 4px; font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+  h2 { margin: 0 0 12px; font-size: 28px; line-height: 1.1; font-weight: 700; }
+  p, li { margin: 0 0 12px; }
+  ol { padding-left: 22px; }
+  section { border-top: 1px solid var(--ink); }
+  footer { margin-top: 40px; border-top: 3px double var(--ink); padding-top: 10px; font-size: 14px; color: var(--muted); font-style: italic; }
+</style>
+</head>
+<body>
+<main>
+  <div class="dateline"><span>Sudoku · app.gulolio.sudoku</span><span>Gulolio</span></div>
+  <h1>Borrar mis datos</h1>
+  <div class="double"><p>Delete my data</p></div>
+
+  <section lang="es">
+    <div class="kicker">Español</div>
+    <h2>Tu nombre y resultados de la clasificación</h2>
+    <p>Sudoku solo guarda datos en su servidor si entraste en la clasificación diaria: tu nombre, una huella de tu código secreto y tus resultados clasificados. Puedes borrarlo todo:</p>
+    <ol>
+      <li><strong>Desde la app:</strong> abre Sudoku y, en la portada, toca «Borrar mi nombre y resultados» y confirma. Se borra al momento.</li>
+      <li><strong>Sin la app:</strong> escribe a <a href="mailto:sudokupaper@proton.me?subject=Borrar%20mis%20datos">sudokupaper@proton.me</a> indicando tu nombre en la clasificación. Puede que te pidamos confirmarlo. Lo borramos en un plazo de 30 días.</li>
+    </ol>
+    <p>Se borran tu nombre, la huella de tu código y todos tus resultados; dejas de aparecer en las clasificaciones. No se conserva nada. Tus niveles y estadísticas están solo en tu teléfono y se borran al desinstalar la app.</p>
+    <p><a href="privacy.html">Política de privacidad</a></p>
+  </section>
+
+  <section lang="en">
+    <div class="kicker">English</div>
+    <h2>Your ranking name and results</h2>
+    <p>Sudoku only stores data on its server if you joined the daily ranking: your name, a fingerprint of your secret code and your ranked results. You can delete all of it:</p>
+    <ol>
+      <li><strong>In the app:</strong> open Sudoku, tap "Delete my name and results" on the front page and confirm. It is deleted at once.</li>
+      <li><strong>Without the app:</strong> email <a href="mailto:sudokupaper@proton.me?subject=Delete%20my%20data">sudokupaper@proton.me</a> with your ranking name. We may ask you to confirm it. We delete it within 30 days.</li>
+    </ol>
+    <p>Your name, the fingerprint of your code and all your results are deleted, and you no longer appear in any ranking. Nothing is kept. Your levels and statistics live only on your phone and are deleted when you uninstall the app.</p>
+    <p><a href="privacy.html">Privacy policy</a></p>
+  </section>
+
+  <footer>Sudoku · Gulolio · sudokupaper@proton.me</footer>
+</main>
+</body>
+</html>
